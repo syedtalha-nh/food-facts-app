@@ -8,7 +8,7 @@ function HomePage() {
 
   return (
     <div>
-      <h2>Search Food</h2>
+      <h2>🔍 Search Your Favorite Food</h2>
 
       <SearchBar onSearch={searchFood} />
 
