@@ -12,7 +12,7 @@ function useFoodSearch() {
 
     try {
       const res = await axios.get(
-        'https://world.openfoodfacts.org/cgi/search.pl',
+        'https://www.kaggle.com/datasets/openfoodfacts/world-food-facts/api/v0/product/737628064502.json',
         {
           params: {
             search_terms: query,

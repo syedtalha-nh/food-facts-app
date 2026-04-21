@@ -1,12 +1,24 @@
 import { NavLink } from 'react-router-dom'
+import { useSelector } from 'react-redux'
 
-function NavBar({ savedCount }) {
+function NavBar() {
+  const savedCount = useSelector(state => state.saved.items.length)
+
   return (
-    <nav>
-      <NavLink to="/">Home</NavLink>
-      <NavLink to="/saved">
-        Saved {savedCount > 0 && `(${savedCount})`}
-      </NavLink>
+    <nav
+      style={{
+        display: 'flex',
+        justifyContent: 'space-between',
+        padding: '15px',
+        background: '#eee'
+      }}
+    >
+      <h2>🥗 FoodFacts</h2>
+
+      <div style={{ display: 'flex', gap: '10px' }}>
+        <NavLink to="/">Search</NavLink>
+        <NavLink to="/saved">Saved ({savedCount})</NavLink>
+      </div>
     </nav>
   )
 }

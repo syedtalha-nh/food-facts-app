@@ -2,8 +2,8 @@ import FoodCard from './FoodCard'
 
 function FoodList({ products }) {
   if (products.length === 0) {
-    return null
-  }
+  return <p>No results found</p>
+}
 
   return (
     <div className="food-list">
